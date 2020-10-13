@@ -70,7 +70,9 @@ df_rds = pd.DataFrame(db_info)
 
 print(df_rds)
 
-df.to_csv('rds.csv')
+
+# Change the string below to change the name of the output file
+df_rds.to_csv('rds.csv')
 
 
 

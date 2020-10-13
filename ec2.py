@@ -1,13 +1,17 @@
 #https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.describe_instances
 
+
+#please run 'pip install ---' for the libraries below.
+#install awscli
 import boto3
-import json
 import pandas as pd
 
 client = boto3.client('ec2')
 
 
 response = client.describe_instances()
+
+print(response)
 
 
 instance_id = []
@@ -21,10 +25,9 @@ security_groups = []
 vpc_id = []
 subnet = []
 name = []
+private_ip = []
 
 
-
-# print(response) #pretty print response from describe_instance
 
 for x in response['Reservations']:
     for y in x['Instances']:
@@ -47,6 +50,7 @@ for x in response['Reservations']:
                     name.append(n["Value"])
         else:
             name.append("N/A")
+        private_ip.append(y["NetworkInterfaces"][0]["PrivateIpAddress"])
 
 
 
@@ -84,15 +88,17 @@ for n in image_id:
 # print(name)
 # print(len(name))
 
-instance_info = {"name":name, "instance ID" : instance_id , "instance type" : instance_type, "state": state_name, "image ID": image_id, "Platform type": platform_type, "ami ID": ami_id,"VPC ID": vpc_id, "subnet": subnet, "security groups": security_groups}
+instance_info = {"name":name, "instance ID" : instance_id , "instance type" : instance_type, "state": state_name, "image ID": image_id, "Platform type": platform_type, "ami ID": ami_id,"VPC ID": vpc_id, "subnet": subnet, "private ip": private_ip , "security groups": security_groups}
 
 df_ec2 = pd.DataFrame(instance_info)
-
 
 print(df_ec2)
 
 
-df.to_csv('eu-west-1-ck-ec2.csv')
+print(df_ec2)
+
+# Change the string below to change the name of the output file
+df_ec2.to_csv('eu-west-1-ck-ec2.csv')
 
 
 

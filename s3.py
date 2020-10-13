@@ -39,6 +39,8 @@ s3_info = {"name":s3_name, "creation date": s3_create_time_str, "size (bytes)": 
 
 df_s3 = pd.DataFrame(s3_info)
 
+
+# Change the string below to change the name of the output file
 df_s3.to_csv('eu-west-1-ck-s3.csv')
 
 print(df_s3)
