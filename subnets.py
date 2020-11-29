@@ -38,7 +38,7 @@ df_subnet = pd.DataFrame(subnet_info)
 print(df_subnet)
 
 # Change the string below to change the name of the output file
-df_subnet.to_csv('eu-west-1-ck-subnets.csv')
+df_subnet.to_csv('output-filename.csv')
 
 
 
