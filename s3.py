@@ -1,3 +1,5 @@
+"""Script to export list of S3 buckets from AWS into .csv"""
+
 import boto3
 import json
 import pandas as pd
