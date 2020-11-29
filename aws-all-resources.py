@@ -1,5 +1,6 @@
+"""Script to export list of EBS/EC2/RDS/S3/Subnets from AWS to .csv"""
+
 import boto3
-import json
 import pandas as pd
 
 """EBS""" 
