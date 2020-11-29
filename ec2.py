@@ -68,23 +68,6 @@ for n in image_id:
     
 
 
-
-
-# print(sec)
-
-
-
-# print(security_groups)
-
-# print(len(platform_type))
-# print(len(image_id))
-# print(len(state_name))
-# print(len(instance_type))
-# print(len(instance_id))
-# print(len(security_groups))
-# print(name)
-# print(len(name))
-
 instance_info = {"name":name, "instance ID" : instance_id , "instance type" : instance_type, "state": state_name, "image ID": image_id, "Platform type": platform_type, "ami ID": ami_id,"VPC ID": vpc_id, "subnet": subnet, "private ip": private_ip , "security groups": security_groups}
 
 df_ec2 = pd.DataFrame(instance_info)
@@ -95,7 +78,7 @@ print(df_ec2)
 print(df_ec2)
 
 # Change the string below to change the name of the output file
-df_ec2.to_csv('eu-west-1-ck-ec2.csv')
+df_ec2.to_csv('output-filename.csv')
 
 
 
