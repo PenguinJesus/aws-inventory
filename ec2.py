@@ -1,8 +1,5 @@
-#https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.describe_instances
+"""Script to export list of EC2 instances from AWS"""
 
-
-#please run 'pip install ---' for the libraries below.
-#install awscli
 import boto3
 import pandas as pd
 
