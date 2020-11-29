@@ -1,3 +1,5 @@
+"""Script to export list of ebs volumes in .csv"""
+
 import boto3
 import json
 import pandas as pd
