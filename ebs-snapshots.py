@@ -1,12 +1,14 @@
+"""Script for exporting list of snapshots in AWS into .csv"""
+
 import boto3
 import pandas as pd
 
 client = boto3.client('ec2')
 
-response = client.describe_snapshots(OwnerIds=['069127586842'])
+response = client.describe_snapshots(OwnerIds=['123345456']) # ENTER ACCOUNT ID HERE
 
 
-owner_id = "069127586842" ###################################### ENTER ACCOUNT ID HERE
+owner_id = "1234566789" # ENTER ACCOUNT ID HERE
 
 
 
