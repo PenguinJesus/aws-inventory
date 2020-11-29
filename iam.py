@@ -1,3 +1,5 @@
+"""Script to export list of IAM users into .csv"""
+
 import boto3
 import pandas as pd
 
