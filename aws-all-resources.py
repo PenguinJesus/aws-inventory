@@ -367,7 +367,7 @@ print(df_iam)
 
 
 # Change the string below to change the name of the output file
-writer = pd.ExcelWriter('eu-central-1-ck-all.xlsx', engine = 'xlsxwriter')
+writer = pd.ExcelWriter('output-filename.xlsx', engine = 'xlsxwriter') 
 
 df_ec2.to_excel(writer, sheet_name="ec2")
 df_ebs.to_excel(writer,sheet_name="ebs")
