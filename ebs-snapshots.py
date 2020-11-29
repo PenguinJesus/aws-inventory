@@ -40,5 +40,5 @@ df = pd.DataFrame(snapshot_info)
 
 print(df)
 
-
-df.to_csv('eu-west-1-ck-snapshots.csv')
+#change output filename below
+df.to_csv('output-filename.csv')
