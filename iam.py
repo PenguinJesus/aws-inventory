@@ -64,9 +64,6 @@ for h in create_date:
     h = h[:-6]
     create_date_str.append(h)
 
-print(create_date)
-print(password_last_used)
-
 
 for g in password_last_used:
     if g is not 'null':
@@ -84,5 +81,5 @@ print(df_iam)
 
 
 # Change the string below to change the name of the output file
-#df_iam.to_csv('eu-west-1-ck-iam.csv')
+df_iam.to_csv('output-filename.csv')
 
