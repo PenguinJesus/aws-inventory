@@ -54,4 +54,4 @@ df_ebs = pd.DataFrame(volume_info)
 print(df_ebs)
 
 # Change the string below to change the name of the output file
-df_ebs.to_csv('eu-west-1-ck-ebs.csv')
+df_ebs.to_csv('output-filename.csv')
