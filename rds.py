@@ -1,3 +1,5 @@
+"""Script to export RDS list into .csv"""
+
 import boto3
 import pandas as pd
 
